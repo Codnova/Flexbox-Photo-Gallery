@@ -10,7 +10,6 @@
   color: #fff;
   width: 100%;
   border-bottom: 4px solid #fdb347;
-  /*margin: 0 auto; Centers the header container and removes the extra margin on top of the element*/
 }
 
 body {
@@ -19,12 +18,27 @@ body {
   font-family: sans-serif;
 }
 
-.gallery img{ /*Targets the img elements INSIDE the gallery container */
+.gallery img { /*Targets the img elements INSIDE the gallery container */
   width: 100%;
   max-width: 350px; 
   height: 300px;
+  object-fit: cover; /*This will tell the image to fill the img container while maintaining aspect ratio, resulting in cropping to fit. */
+  border-radius: 10px; /*Roundes the borders of the images*/
 }
 
-.gallery {
-  display: flex;
+.gallery::after { /*Creates an element that is the last child of the selected element. You can use it to add an empty element after the last image. */
+  content: ""; /*Sets an empty element as the last image*/
+  width: 350px;
+}
+
+.gallery { /*Targets the whole container*/
+  display: flex; /*Sets the container as a flexbox */
+  flex-direction: row; /*Sets the direction of the main axis of the flexbox  */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px; /*Gives separation from the gallery container to the header*/
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 16px; /* Gives separation between the images inside the container */ 
 }
