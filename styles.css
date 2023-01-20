@@ -1,1 +1,30 @@
-.
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center; /* Centers the header's text */
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  width: 100%;
+  border-bottom: 4px solid #fdb347;
+  /*margin: 0 auto; Centers the header container and removes the extra margin on top of the element*/
+}
+
+body {
+  background-color: #f5f6f7;
+  margin: 0; /* Removes the margin of the body element */
+  font-family: sans-serif;
+}
+
+.gallery img{ /*Targets the img elements INSIDE the gallery container */
+  width: 100%;
+  max-width: 350px; 
+  height: 300px;
+}
+
+.gallery {
+  display: flex;
+}
